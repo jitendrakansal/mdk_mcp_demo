@@ -46,8 +46,9 @@
 					},
 					"_Type": "Section.Type.ObjectTable",
 					"Target": {
+						"Service": "/MDK_MCP_Demo/Services/IncidentManagement.service",
 						"EntitySet": "Incident",
-						"Service": "/MDK_MCP_Demo/Services/IncidentManagement.service"
+						"QueryOptions": "$filter=serviceWorker_ID eq 120"
 					},
 					"_Name": "SectionObjectTable0",
 					"Visible": true,
