@@ -8,14 +8,11 @@ export default function StatusChangeProtocol(clientAPI) {
     //Get the section based on the name
     const fcsection = sectionedTable.getSection('SectionFormCell0');
     //Get the control based on the name
-   // const fcAttachment = fcsection.getControl('FCDeviceImage');
-    const fcSignatureCapture = fcsection.getControl('FCCustomerSignature');
+  const fcSignatureCapture = fcsection.getControl('FCCustomerSignature');
     const selectedValue = clientAPI.getValue()[0].ReturnValue;
     if (selectedValue == "In Process") {
-       // fcAttachment.setVisible(false);
         fcSignatureCapture.setVisible(false);
     } else if (selectedValue == "Closed") {
-      //  fcAttachment.setVisible(true);
         fcSignatureCapture.setVisible(true);
     }
 }
