@@ -17,7 +17,6 @@
 		"ReadLink": "{@odata.readLink}"
 	},
 	"Properties": {
-		"ID": "",
 		"Status": "#Control:FCStatus/#SelectedValue",
 		"DeviceID": "#Control:FCDeviceID/#Value"
 	}
