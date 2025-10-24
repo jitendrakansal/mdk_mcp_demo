@@ -131,7 +131,7 @@
 		],
 		"_Name": "ActionBar1",
 		"_Type": "Control.Type.ActionBar",
-		"Caption": "/MDK_MCP_Demo/Rules/Incident/Incident_Count.js",
+		"Caption": "Incidents",
 		"PrefersLargeCaption": true
 	}
 }
