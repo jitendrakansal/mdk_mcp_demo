@@ -1,0 +1,9 @@
+{
+    "Service": "/MDK_MCP_Demo/Services/IncidentManagement.service",
+    "_Type": "Action.Type.OfflineOData.Upload",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnSuccess": "/MDK_MCP_Demo/Actions/Service/DownloadStartedMessage.action",
+    "OnFailure": "/MDK_MCP_Demo/Actions/Service/SyncFailureMessage.action"
+}

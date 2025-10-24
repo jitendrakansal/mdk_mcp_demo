@@ -1,0 +1,24 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Incident_UpdateEntity"
+	},
+	"OnFailure": {
+		"Name": "/MDK_MCP_Demo/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Update entity failure - {#ActionResults:Incident_UpdateEntity/error}",
+			"Title": "Update Incident"
+		}
+	},
+	"OnSuccess": "/MDK_MCP_Demo/Actions/Incident/Incident_UploadStream.action",
+	"Target": {
+		"Service": "/MDK_MCP_Demo/Services/IncidentManagement.service",
+		"EntitySet": "Incident",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"ID": "",
+		"Status": "#Control:FCStatus/#SelectedValue",
+		"DeviceID": "#Control:FCDeviceID/#Value"
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"_Type": "Action.Type.PopoverMenu",
+	"IsBottomSheet": true,
+	"PopoverItems": [
+		{
+			"Enabled": true,
+			"Icon": "sap-icon://synchronize",
+			"OnPress": "/MDK_MCP_Demo/Actions/Service/SyncStartedMessage.action",
+			"Title": "Sync Changes",
+			"Visible": "$(PLT,true,true,false)"
+		},
+		{
+			"Enabled": true,
+			"Icon": "sap-icon://headset",
+			"OnPress": "/MDK_MCP_Demo/Actions/Application/NavToSupport.action",
+			"Title": "Support",
+			"Visible": true
+		},
+		{
+			"Enabled": true,
+			"Icon": "sap-icon://refresh",
+			"OnPress": "/MDK_MCP_Demo/Actions/Application/AppUpdateProgressBanner.action",
+			"Title": "Check for Updates",
+			"Visible": "$(PLT,true,true,false)"
+		},
+		{
+			"Enabled": true,
+			"Icon": "sap-icon://hint",
+			"OnPress": "/MDK_MCP_Demo/Actions/Application/NavToAbout.action",
+			"Title": "About",
+			"Visible": true
+		},
+		{
+			"Enabled": true,
+			"Icon": "sap-icon://log",
+			"OnPress": "/MDK_MCP_Demo/Actions/LogoutMessage.action",
+			"Title": "Logout",
+			"Visible": "$(PLT,true,true,false)"
+		}
+	]
+}

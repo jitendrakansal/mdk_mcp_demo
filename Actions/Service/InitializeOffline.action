@@ -1,0 +1,24 @@
+{
+    "Service": "/MDK_MCP_Demo/Services/IncidentManagement.service",
+    "DefiningRequests": [{
+            "Name": "Customer",
+            "Query": "Customer"
+        },
+        {
+            "Name": "Incident",
+            "Query": "Incident"
+        },
+        {
+            "Name": "ServiceWorker",
+            "Query": "ServiceWorker"
+        }
+    ],
+    "_Type": "Action.Type.ODataService.Initialize",
+    "ShowActivityIndicator": true,
+    "ActivityIndicatorText": "Downloading...",
+    "ActionResult": {
+        "_Name": "init"
+    },
+    "OnSuccess": "/MDK_MCP_Demo/Actions/Service/InitializeOfflineSuccessMessage.action",
+    "OnFailure": "/MDK_MCP_Demo/Actions/Service/InitializeOfflineFailureMessage.action"
+}
