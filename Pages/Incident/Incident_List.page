@@ -7,8 +7,8 @@
 					{
 						"_Type": "Control.Type.FastFilterItem",
 						"_Name": "FastFilter0",
-						"ReturnValue": "Urgency eq 'High'",
 						"DisplayValue": "High Priority",
+						"ReturnValue": "Urgency eq 'High'",
 						"FilterType": "Filter"
 					},
 					{
@@ -37,6 +37,12 @@
 						"HeaderSeparator": true,
 						"FooterSeparator": true,
 						"ControlSeparator": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
 					},
 					"_Type": "Section.Type.ObjectTable",
 					"Target": {
@@ -93,12 +99,6 @@
 						"ShowLoadingIndicator": true,
 						"LoadingIndicatorText": "Loading more items, please wait..."
 					},
-					"Grouping": {
-						"GroupingProperties": [],
-						"Header": {
-							"Items": []
-						}
-					},
 					"HighlightSelectedItem": false
 				}
 			],
@@ -112,6 +112,9 @@
 		"OnPulledDown": "/MDK_MCP_Demo/Actions/Service/SyncStartedMessage.action"
 	},
 	"_Type": "Page",
+	"DataSubscriptions": [
+		"/MDK_MCP_Demo/Services/IncidentManagement.service"
+	],
 	"_Name": "Incident_List",
 	"ActionBar": {
 		"Items": [
