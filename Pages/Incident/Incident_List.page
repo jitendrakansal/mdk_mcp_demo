@@ -65,7 +65,6 @@
 						},
 						"Title": "{Title}",
 						"Subhead": "ID: {ID}",
-						"Description": "{Description}",
 						"StatusText": "{Urgency}",
 						"StatusImage": "/MDK_MCP_Demo/Rules/Incident/ShowPriorityImage.js",
 						"SubstatusText": "{Status}",
