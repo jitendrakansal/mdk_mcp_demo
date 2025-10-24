@@ -29,7 +29,6 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "FCStatus",
-							"RequiredIndicator": true,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -55,7 +54,6 @@
 							"Value": "{DeviceID}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCDeviceID",
-							"RequiredIndicator": true,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Device ID",
@@ -67,7 +65,6 @@
 						{
 							"_Type": "Control.Type.FormCell.InlineSignatureCapture",
 							"_Name": "FCCustomerSignature",
-							"RequiredIndicator": true,
 							"IsVisible": false,
 							"Separator": true,
 							"Caption": "Customer Signature",
