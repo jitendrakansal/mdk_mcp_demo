@@ -1,113 +1,106 @@
 {
-	"Controls": [
-		{
-			"FilterFeedbackBar": {
-				"ShowAllFilters": true,
-				"FastFilters": [
-					{
-						"_Type": "Control.Type.FastFilterItem",
-						"_Name": "FastFilter0",
-						"DisplayValue": "High Priority",
-						"ReturnValue": "Urgency eq 'High'",
-						"FilterType": "Filter"
-					},
-					{
-						"_Type": "Control.Type.FastFilterItem",
-						"_Name": "FastFilter1",
-						"DisplayValue": "Open Status",
-						"ReturnValue": "Status eq 'New' or Status eq 'In Process'",
-						"FilterType": "Filter"
-					}
-				],
-				"_Type": "Control.Type.FilterFeedbackBar"
-			},
-			"_Type": "Control.Type.SectionedTable",
-			"_Name": "SectionedTable",
-			"Sections": [
+	"Controls": [{
+		"FilterFeedbackBar": {
+			"ShowAllFilters": true,
+			"FastFilters": [{
+					"_Type": "Control.Type.FastFilterItem",
+					"_Name": "FastFilter0",
+					"DisplayValue": "High Priority",
+					"ReturnValue": "Urgency eq 'High'",
+					"FilterType": "Filter"
+				},
 				{
-					"Header": {
-						"_Type": "SectionCommon.Type.Header",
-						"_Name": "SectionHeader0",
-						"AccessoryType": "None",
-						"UseTopPadding": false
-					},
-					"Separators": {
-						"TopSectionSeparator": false,
-						"BottomSectionSeparator": true,
-						"HeaderSeparator": true,
-						"FooterSeparator": true,
-						"ControlSeparator": true
-					},
-					"Grouping": {
-						"GroupingProperties": [],
-						"Header": {
-							"Items": []
-						}
-					},
-					"_Type": "Section.Type.ObjectTable",
-					"Target": {
-						"Service": "/MDK_MCP_Demo/Services/IncidentManagement.service",
-						"EntitySet": "Incident",
-						"QueryOptions": "$filter=serviceWorker_ID eq 120"
-					},
-					"_Name": "SectionObjectTable0",
-					"Visible": true,
-					"EmptySection": {
-						"Caption": "No incident found!",
-						"FooterVisible": false
-					},
-					"ObjectCell": {
-						"ContextMenu": {
-							"Items": [],
-							"PerformFirstActionWithFullSwipe": true,
-							"_Type": "ObjectCell.Type.ContextMenu",
-							"LeadingItems": [],
-							"TrailingItems": []
-						},
-						"Title": "{Title}",
-						"Subhead": "ID: {ID}",
-						"StatusText": "{Urgency}",
-						"StatusImage": "/MDK_MCP_Demo/Rules/Incident/ShowPriorityImage.js",
-						"SubstatusText": "{Status}",
-						"PreserveIconStackSpacing": false,
-						"AccessoryType": "DisclosureIndicator",
-						"Tags": [],
-						"AvatarStack": {
-							"Avatars": [
-								{
-									"Image": "/MDK_MCP_Demo/Services/IncidentManagement.service/{@odata.readLink}/DeviceImage"
-								}
-							],
-							"ImageIsCircular": true,
-							"ImageHasBorder": false
-						},
-						"AvatarGrid": {
-							"ImageIsCircular": true
-						},
-						"OnPress": "/MDK_MCP_Demo/Actions/Incident/NavToIncident_Detail.action",
-						"_Type": "ObjectTable.Type.ObjectCell",
-						"Selected": false
-					},
-					"Search": {
-						"Enabled": true,
-						"Placeholder": "Incident Search",
-						"BarcodeScanner": true,
-						"Delay": 500,
-						"MinimumCharacterThreshold": 3
-					},
-					"DataPaging": {
-						"ShowLoadingIndicator": true,
-						"LoadingIndicatorText": "Loading more items, please wait..."
-					},
-					"HighlightSelectedItem": false
+					"_Type": "Control.Type.FastFilterItem",
+					"_Name": "FastFilter1",
+					"DisplayValue": "Open Status",
+					"ReturnValue": "Status eq 'New' or Status eq 'In Process'",
+					"FilterType": "Filter"
 				}
 			],
-			"LoadingIndicator": {
+			"_Type": "Control.Type.FilterFeedbackBar"
+		},
+		"_Type": "Control.Type.SectionedTable",
+		"_Name": "SectionedTable",
+		"Sections": [{
+			"Header": {
+				"_Type": "SectionCommon.Type.Header",
+				"_Name": "SectionHeader0",
+				"AccessoryType": "None",
+				"UseTopPadding": false
+			},
+			"Separators": {
+				"TopSectionSeparator": false,
+				"BottomSectionSeparator": true,
+				"HeaderSeparator": true,
+				"FooterSeparator": true,
+				"ControlSeparator": true
+			},
+			"Grouping": {
+				"GroupingProperties": [],
+				"Header": {
+					"Items": []
+				}
+			},
+			"_Type": "Section.Type.ObjectTable",
+			"Target": {
+				"Service": "/MDK_MCP_Demo/Services/IncidentManagement.service",
+				"EntitySet": "Incident",
+				"QueryOptions": "$filter=serviceWorker_ID eq 120"
+			},
+			"_Name": "SectionObjectTable0",
+			"Visible": true,
+			"EmptySection": {
+				"Caption": "No incident found!",
+				"FooterVisible": false
+			},
+			"ObjectCell": {
+				"ContextMenu": {
+					"Items": [],
+					"PerformFirstActionWithFullSwipe": true,
+					"_Type": "ObjectCell.Type.ContextMenu",
+					"LeadingItems": [],
+					"TrailingItems": []
+				},
+				"Title": "{Title}",
+				"Subhead": "ID: {ID}",
+				"StatusText": "{Urgency}",
+				"StatusImage": "/MDK_MCP_Demo/Rules/Incident/ShowPriorityImage.js",
+				"SubstatusText": "{Status}",
+				"PreserveIconStackSpacing": false,
+				"AccessoryType": "DisclosureIndicator",
+				"Tags": [],
+				"AvatarStack": {
+					"Avatars": [{
+						"Image": "/MDK_MCP_Demo/Services/IncidentManagement.service/{@odata.readLink}/DeviceImage"
+					}],
+					"ImageIsCircular": true,
+					"ImageHasBorder": false
+				},
+				"AvatarGrid": {
+					"ImageIsCircular": true
+				},
+				"OnPress": "/MDK_MCP_Demo/Actions/Incident/NavToIncident_Detail.action",
+				"_Type": "ObjectTable.Type.ObjectCell",
+				"Selected": false
+			},
+			"Search": {
 				"Enabled": true,
-				"Text": "Loading, please wait..."
-			}
+				"Placeholder": "Incident Search",
+				"BarcodeScanner": true,
+				"Delay": 500,
+				"MinimumCharacterThreshold": 3
+			},
+			"DataPaging": {
+				"ShowLoadingIndicator": true,
+				"LoadingIndicatorText": "Loading more items, please wait..."
+			},
+			"HighlightSelectedItem": false
+		}],
+		"LoadingIndicator": {
+			"Enabled": true,
+			"Text": "Loading, please wait..."
 		}
-	],
+	}],
 	"PullDown": {
 		"OnPulledDown": "/MDK_MCP_Demo/Actions/Service/SyncStartedMessage.action"
 	},
@@ -116,22 +109,20 @@
 		"/MDK_MCP_Demo/Services/IncidentManagement.service"
 	],
 	"_Name": "Incident_List",
+	"_Type": "Page",
+	"Caption": "Incidents",
+	"PrefersLargeCaption": true,
 	"ActionBar": {
-		"Items": [
-			{
-				"_Type": "Control.Type.ActionBarItem",
-				"_Name": "ActionBarItem0",
-				"Caption": "User",
-				"Icon": "sap-icon://customer",
-				"Position": "Right",
-				"IsIconCircular": false,
-				"Visible": true,
-				"OnPress": "/MDK_MCP_Demo/Actions/Application/UserMenuPopover.action"
-			}
-		],
-		"_Name": "ActionBar1",
-		"_Type": "Control.Type.ActionBar",
-		"Caption": "Incidents",
-		"PrefersLargeCaption": true
+		"Items": [{
+
+			"_Name": "ActionBarItem0",
+			"Caption": "User",
+			"Icon": "sap-icon://customer",
+			"Position": "Right",
+			"IsIconCircular": false,
+			"Visible": true,
+			"OnPress": "/MDK_MCP_Demo/Actions/Application/UserMenuPopover.action"
+		}],
+		"_Name": "ActionBar1"
 	}
 }
