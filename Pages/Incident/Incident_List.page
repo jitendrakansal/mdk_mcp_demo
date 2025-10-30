@@ -109,7 +109,6 @@
 		"/MDK_MCP_Demo/Services/IncidentManagement.service"
 	],
 	"_Name": "Incident_List",
-	"_Type": "Page",
 	"Caption": "Incidents",
 	"PrefersLargeCaption": true,
 	"ActionBar": {
